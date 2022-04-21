@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-image: url(background1.png);
+}
+
+main {
+  position: relative;
+  display: flex;
+  padding: 40px;
+  border: 1px solid white;
+  background-image: url(background2.jpg);
+}
+
+a {
+  color: white;
+}
+
+p {
+  margin: 0.3em;
+}
+
+p.errore {
+  margin: 0;
+}
+
+.errore {
+  color: red;
+  padding-left: 3px;
+}
+
+p#registrazione {
+  margin-top: 40px;
+}
+
+label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input#input {
+  position: absolute;
+  top: 120px;
+  right: 44.4px;
+}
+
+#regolazione_div {
+  color: red;
+  padding-left: 3px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media(max-width: 400px) { 
+  input#input {
+    margin-top: 12px;
+  }
+}
+

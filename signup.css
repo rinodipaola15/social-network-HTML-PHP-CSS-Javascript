@@ -1,0 +1,63 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url(background1.png);
+  }
+
+main {
+    position: relative;
+    display: flex;
+    padding: 55px;
+    border: 1px solid white;
+    background-image: url(background2.jpg);
+}
+
+p {
+    margin: 0.3em;
+}
+
+p#login {
+    margin-top: 20px;
+}
+
+a {
+    color: white;
+}
+
+label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input#input {
+    position: absolute;
+    right: 60px;
+}
+
+.bordo {
+    padding: 1px;
+    border: 1.5px solid red;
+}
+
+.load_img {
+    color: red;
+    margin-top: 87px;
+}
+
+.div {
+    color: red;
+    padding-left: 3px;
+}
+
+.hidden {
+    display: none;
+}
+
+#input_img {
+    margin-left: 50px;
+    margin-right: -91.5px;
+}
+

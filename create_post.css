@@ -1,0 +1,405 @@
+body {
+  margin: 0;
+  color: black;
+}
+
+#credits {
+  margin: 0;
+  height: 180px;
+  background-image: url(background2.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#author {
+  color: white;
+  margin-left: 20px;
+  font-size: 68px;
+  letter-spacing: 4px;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+#designs {
+  color: white;
+  font-family: 'Forum', cursive;
+  font-size: 26;
+  letter-spacing: 8px;
+  position: absolute;
+  top: 118px;
+  left: 423px;
+}
+
+header {
+  color: white;
+  background-color: #E41B17;
+  height: 450px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#sfondo {
+  position: absolute;
+  top: 19%;
+  height: 81%;
+  width: 100%;
+  background-image: url(background1.png);
+  z-index: 1;
+}
+
+header div div img {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  border: 2px solid white;
+}
+
+header h1 {
+  font-weight: normal;
+  text-align: center;
+  z-index: 1;
+  margin-bottom: -42px;
+}
+
+header h1 a {
+  font-size: 15px;
+}
+
+header h1 em {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+header h1 strong {
+  font-size: 68px;
+  letter-spacing: 4px;
+}
+
+header nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav div, header div span {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  padding: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+a:hover {
+  text-decoration: underline; 
+}
+
+#links a {
+  margin: 15px;
+}
+
+#logo {
+  font-size: 40px;
+  color: white;
+}
+
+section#post {
+  margin-top: 100px;
+  margin-bottom: 0px;
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container {
+  margin-bottom: 60px;
+  padding: 20px 20px;
+  position: relative;
+  background-color: #E41B17;
+  border-radius: 7%;
+}
+
+.div_titolo {
+  margin: 10px 0px;
+}
+
+.data {
+  opacity: 0.7;
+  position: absolute;
+  top: 40px;
+}
+
+.div_img {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border: 1px solid black;
+  background-color: white;
+}
+
+.div_img img {
+  position: absolute;
+  margin: auto;
+  max-width: 300px;
+  max-height: 300px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.icona {
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  margin-right: 10px;
+  border: 0.3px solid black;
+}
+
+.like_button {
+  width: 80px;
+  cursor: pointer;
+  margin-top: 7px;
+  margin-right: 20px;
+}
+
+.like_verificato {
+  color: blue;
+}
+
+.num_like {
+  font-family: arial;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.autore {
+  position: absolute;
+  font-size: 17px;
+  font-weight: bold;
+  color: #385898;
+}
+
+footer address, header h1 strong, #links {
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+ 
+footer {
+  margin-top: 50px;
+  height: 180px;
+  background-color: rgb(31, 31, 31);
+  color: rgba(255, 255, 255, .8);
+  background-image: url(https://i.pinimg.com/originals/c4/53/5c/c4535c40c5fb932efc4eb9054e869386.jpg);
+  text-align: center;
+  line-height: 180px;
+}
+
+footer span {
+  font-size: 18px;
+  color: rgba(255, 255, 255, .7);
+}
+
+
+/*---------------------------------------------------------------*/
+
+
+main {
+  display: flex;
+  margin: 50px 0px;
+}
+
+main form {
+  margin: 0px 0px;
+}
+
+main form p {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+input#cerca_contenuto {
+  width: 500px;
+  height: 28px;
+  padding: 5px;
+  margin-left: 35px;
+  margin-bottom: 5px;
+}
+
+select {
+  width: 500px;
+  height: 28px;
+  padding: 5px;
+  
+  margin-bottom: 5px;
+}
+
+input#invia_dati {
+  height: 28px;
+  width: 70px;
+}
+
+#artist-view {
+  min-height: 267.6px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 25px;
+  color: black;
+}
+  
+#artist-view .artist {
+  margin: 10px;
+  border: 1px solid slategray;
+  padding: 5px;
+  max-width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+  
+#artist-view img {
+  max-width: 100%;
+  height: auto;
+}
+
+#modal-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-view img {
+  max-height: 70%;
+  max-width: 70%;
+}
+
+#modal-view.hidden {
+  display: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+form#hidden_form {
+  position: fixed;
+  left: 68vw;
+  top: 62vh;
+  background-color: rgb(30, 30, 30);
+}
+
+form#hidden_form p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+form#hidden_form p span{
+  color: white;
+}
+
+#avviso_pubblicazione {
+  padding-left: 10px;
+  padding-bottom: 16px;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+#messaggio_errore {
+  color: black;
+}
+
+@media(max-width: 1080px) { 
+  #logo {
+      font-size: 24px;
+}
+}
+
+@media(max-width: 900px) { 
+  #logo {
+      font-size: 18px;
+}
+}
+
+@media(max-width: 820px) { 
+  #logo {
+      font-size: 0px;
+  }
+}
+
+@media(max-width: 640px) { 
+ header h1 strong {
+     font-size: 30px;
+ }
+ header h1 em {
+     font-size: 16px;
+ }
+ #author {
+      font-size: 30px;
+ }
+ #designs {
+      font-size: 20px;
+      left: 21px;
+ }
+ header nav {
+     display: block;
+ }
+ #links {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+}
+
+@media(max-width: 400px) { 
+  #links a {
+      font-size: 9px;
+  }
+}
+
+@media(max-width: 600px) { 
+  input#cerca_contenuto {
+    width: 300px;
+  }
+  select {
+    width: 300px;
+  }
+  form#hidden_form {
+    left: 20px;
+  }
+  p#title {
+    width: 260px;
+  }
+  form#hidden_form {
+    position: fixed;
+    left: 15vw;
+    top: 72vh;
+    background-color: rgb(30, 30, 30);
+  }
+}
+

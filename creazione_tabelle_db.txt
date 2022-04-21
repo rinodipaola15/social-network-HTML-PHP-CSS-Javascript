@@ -1,0 +1,24 @@
+create table Utente(nome_utente varchar(255) primary key, nome varchar(255), cognome varchar(255), email varchar(255), password varchar(255), immagine_profilo varchar(255));
+insert into Utente(nome_utente, nome, cognome, email, password, immagine_profilo) values('ironrinox9', 'Rino', 'Di Paola', 'rino.dipaola@gmail.com', 'deathnote1', 'https://images2.imagebam.com/c7/4b/0d/0fe2291341658274.jpg');
+insert into Utente(nome_utente, nome, cognome, email, password, immagine_profilo) values('pixiegiulia', 'Giulia', 'Marano', 'giulia.marano@gmail.com', 'deathnote2', 'https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/15085546_1162839663765183_8528837258904900435_n.jpg?_nc_cat=106&_nc_sid=85a577&_nc_ohc=z_Iydh3rLNEAX9A3dVm&_nc_ht=scontent-mxp1-1.xx&oh=ac96edc1fb4ba8c594b9db3f6afda910&oe=5ECE5FFE');
+create table Post(id int auto_increment primary key, creatore varchar(255), titolo varchar(255), url_immagine varchar(255), data_e_ora datetime, index idx_creatore(creatore), foreign key(creatore) references Utente(nome_utente));
+insert into Post(creatore, titolo, url_immagine, data_e_ora) values('ironrinox9', 'Pink Floyd, what else!', 'https://i.scdn.co/image/e69f71e2be4b67b82af90fb8e9d805715e0684fa', now());
+create table Likes(nome_utente varchar(255), post int, index idx_nome_utente(nome_utente), index idx_post(post), foreign key(nome_utente) references Utente(nome_utente), foreign key(post) references Post(id), primary key(nome_utente, post));
+insert into Likes(nome_utente, post) values('ironrinox9', 1);
+create table Follower(nome_utente varchar(255), persona_seguita varchar(255), index idx_nome_utente(nome_utente), index idx_persona_seguita(persona_seguita), foreign key(nome_utente) references Utente(nome_utente), foreign key(persona_seguita) references Utente(nome_utente), primary key(nome_utente, persona_seguita));
+insert into Follower(nome_utente, persona_seguita) values('ironrinox9', 'pixiegiulia');
+
+
+
+insert into Utente(nome_utente, nome, cognome, email, password, immagine_profilo) values('giuanniubabbu', 'Giuanni', 'U Babbu', 'giuanni.ubabbu@gmail.com', 'deathnote3', 'https://secure.rai.it/dl/img/2016/07/1469720007359.Schermata_2016_07_28_alle_17.25.58.png');
+insert into Utente(nome_utente, nome, cognome, email, password, immagine_profilo) values('cicciococo', 'Francesco', 'Coco', 'ciccio.coco@gmail.com', 'deathnote3', 'https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/84825350_3428543430508333_7792397789773692928_n.jpg?_nc_cat=109&_nc_sid=85a577&_nc_ohc=178_SmH9bzsAX9pZLAT&_nc_ht=scontent-mxp1-1.xx&oh=b8641b236464bb1c715e37c1c5db12b0&oe=5ECFB2EA');
+
+
+
+
+
+
+SELECT * FROM Post p join Utente u on p.creatore=u.nome_utente where p.creatore='ironrinox9' UNION (select * from Post p join Utente u on p.creatore=u.nome_utente where p.creatore in (select f.persona_seguita from Follower f join Utente u on f.nome_utente='ironrinox9')) order by data_e_ora;
+
+
+
